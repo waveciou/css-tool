@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+// * ==========================================================================
+// * Color
+// * ==========================================================================
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-gray-white: #E4E4E4;
+$color-gray-light: #D3D3D3;
+$color-gray: #B1B1B1;
+$color-gray-dark: #676767;
+
+$color-blue: #02A7EA;
+$color-blue-dark: #0C6CB7;
+
+$color-red: #FA625C;
+$color-red-black: #BE3235;
+
+// * ==========================================================================
+// * RWD Breakpoints
+// * ==========================================================================
+
+// Desktop
+$desktop: (
+    xl: 1600px,
+    lg: 1440px,
+    md: 1280px,
+    sm: 1025px
+);
+
+// Tablet
+$tablet: (
+    lg: 1024px,
+    md: 960px,
+    sm: 768px
+);
+
+// Phone
+$phone: (
+    lg: 767px,
+    md: 480px + 1px,
+    sm: 400px + 1px,
+    xs: 370px + 1px
+);
+
+// * ==========================================================================
+// * Fontsize Setting
+// * ==========================================================================
+
+$fontsize: (
+    1: 2rem,
+    2: 1.75rem,
+    3: 1.5rem,
+    4: 1.25rem,
+    5: 1.125rem,
+    6: 1rem,
+    7: 0.9rem
+);
+
+// * ==========================================================================
+// * Default Style
+// * ==========================================================================
+
+// * Border Style When Focus Trigger
+
+@function focusBorder($inside:false, $opacity:0.6) {
+    @if $inside == true {
+        @return inset 0 0 0 0.2rem rgba($color-blue, $opacity);
+    } @else {
+        @return 0 0 0 0.2rem rgba($color-blue, $opacity);
+    }
+}
+
+// * Text Color When Hover Trigger
+
+$hover-color: $color-red-black;
+
+// * Box Shadow Style When Header Area Fixed On Top
+
+$header-shadow: 0px 3px 10px rgba(87,87,87,0.3);

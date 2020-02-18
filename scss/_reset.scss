@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+// * ==========================================================================
+// * RESET
+// * ==========================================================================
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,18 +20,21 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font-weight:normal;
-    font-family: '微軟正黑體','Microsoft JhengHei',Arial,Helvetica,Sans-Serif; 
+    font: inherit;
+    font: {
+        size: 100%;
+        weight: normal;
+        family: 'Roboto', 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif, Arial;
+    }
     vertical-align: baseline;
     color: #222222;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {display: block;}
 body {line-height: 1;}
-*{box-sizing:border-box;font-family:'微軟正黑體','Microsoft JhengHei',Arial,Helvetica,Sans-Serif;}
+* {box-sizing: border-box;}
 ol, ul {list-style: none;}
-blockquote, q{quotes: none;}
+blockquote, q {quotes: none;}
 blockquote::before, blockquote::after,
 q::before, q::after {
     content: '';
@@ -35,14 +44,16 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-strong{font-weight: bold;}
-a{text-decoration:none;}
-/*clearfix*/
-.wrap::after,
-.clearfix::after {
-    content: '.';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+strong {
+    font-weight: bold;
+}
+a {
+    text-decoration:none;
+}
+button {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font: inherit;
+    cursor: pointer;
 }
